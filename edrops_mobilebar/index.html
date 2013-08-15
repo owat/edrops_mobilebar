@@ -41,7 +41,27 @@
 <script src="scripts/retina.js"			 type="text/javascript"></script>
 <script src="scripts/custom.js"			 type="text/javascript"></script>
 <script src="scripts/framework.js"		 type="text/javascript"></script>
-
+<script src="scripts/edrps.js"		type="text/javascript"></script>
+    
+      <script>
+                                    function logInUser()
+                                    {
+                                        
+                                        var uname = document.getElementById('uname').value;
+                                        var pwd = document.getElementById('pwd').value;
+                                        mobileLogIn (uname, pwd);
+                                        
+                                        /*
+                                        */
+                                       /* uname.put("Username", un);
+                                        /pwd.put("Password", pd);
+                                        
+                                        lin.put(uname);
+                                        lin.put(pwd);
+                                        alert(lin.toString());*/
+                                 
+                                    }
+                                    </script>
 </head>
 <body>
 
@@ -188,8 +208,8 @@
       <div class="container no-bottom">
           <div class="heading">
               <div class="heading-left">
-<em><a href="today.html">today</a></em>
-                  <h3>Login</h3>
+
+                  <h3 onclick="mobileLogIn('iowen','password1');">Login</h3>
               </div>
               <div class="heading-right">
 
@@ -228,18 +248,18 @@
                             </div>
                         </div> 
  
-                        <div class="formFieldWrap">
+                       <div class="formFieldWrap">
                             <label class="field-title contactNameField" for="contactNameField">Username or Email:<span>(required)</span></label>
-                            <input type="text" name="contactNameField" value="" class="contactField requiredField" id="contactNameField"/>
+                            <input type="text" name="contactNameField" value="" class="contactField requiredField" id="uname"/>
                         </div>
                         <div class="formFieldWrap">
                             <label class="field-title contactEmailField" for="contactEmailField">Password: <span>(required)</span></label>
-                            <input type="text" name="contactEmailField" value="" class="contactField requiredField requiredEmailField" id="contactEmailField"/>
+                            <input type="password" name="contactEmailField" value="" class="contactField requiredField requiredEmailField" id="pwd"/>
                         </div>
                        
                         <div class="formSubmitButtonErrorsWrap">
-                            <a class="button-minimal grey-minimal" href="tel:+12 345 657 8963">Log In</a>
-                            <a class="button-minimal grey-minimal" href="sms:+12 345 657 8963" style="margin-left:30px;">Sign Up</a>
+                            <a class="button-minimal grey-minimal" href="javascript:void(0);" onclick="logInUser();">Log In</a>
+                            <a class="button-minimal grey-minimal" href="javascript:void(0);" style="margin-left:30px;">Sign Up</a>
                         </div>
                         <span style="margin-left:30%">
                         <a href="home.html">Forgot Password?</a></span>
@@ -259,7 +279,7 @@
         </div>            
     </div>
 </div>
-
+</div>
 
 </body>
 </html>
