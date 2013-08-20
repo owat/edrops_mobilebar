@@ -62,6 +62,30 @@
                                  
                                     }
                                     </script>
+    <style>
+        #mySpace{
+            visibility:hidden;
+            display:none;
+        }
+                                        @media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px)
+    {
+    #mySpace{
+        display:block;
+    }
+    }
+        </style>
+    <script>
+       $(document).ready(function() {
+           if($('mySpace').css('display') != 'none')
+           {
+        cnt = $('#cnt').height();
+        remainingHeight = parseInt($(window).height()-cnt);
+        $('#mySpace').height(remainingHeight);
+           }});
+           
+    </script>
 </head>
 <body>
 
@@ -196,7 +220,7 @@
     
       
     <div id="content" class="page-content">
-       
+       <div id="cnt">
         <div class="page-header">
             <p class="logo">
                 <img src="styles/images/misc/logo.png" width="78">
@@ -215,11 +239,11 @@
 
               </div>
           </div>
-      </div>
+      
       
       <div class="decoration"></div>
       
- 
+
 
 
     	<div class="container no-bottom">
@@ -235,7 +259,7 @@
                     </div> 
                 </div>
             
-                     <form ation="php/contact.php" method="post" class="contactForm" id="contactForm">
+                     <form ation="php/contact.php" method="post" class="contactForm" id="contactForm" style="min-height:100%;">
                     <fieldset>
                         <div class="formValidationError" id="contactNameFieldError">
                             <div class="small-notification red-notification no-bottom">
@@ -267,10 +291,13 @@
                     </fieldset>
                 </form>    
             </div>
-        </div>                              
+        </div>   
+          </div>
+          <div id="mySpace">&nbsp;</div>
         <div class="decoration"></div>
 		<p class="center-text copyright no-bottom">COPYRIGHT 2013. ALL RIGHTS RESERVED</p> 
     </div> 
+            </div>
     <div class="footer">
         <div class="footer-shortcuts">
             <a href="#"><span class="icon icon-facebook"></span></a>

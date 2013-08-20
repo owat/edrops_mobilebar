@@ -133,7 +133,12 @@ color:#000000;
                                     }
                                     
                                     </style>
-                           
+                               <script>
+       $(document).ready(function() {
+        cnt = $('#cnt').height();
+        remainingHeight = parseInt($(window).height()-cnt);
+        $('#mySpace').height(remainingHeight);});
+    </script>
     
 </head>
 <body >
@@ -269,7 +274,7 @@ color:#000000;
     
       
     <div id="content" class="page-content">
-       
+              <div id="cnt">
         <div class="page-header">
             <p class="logo">
                 <img src="styles/images/misc/logo.png" width="78">
@@ -291,7 +296,7 @@ color:#000000;
         </div>
         
         <div class="decoration"></div>
- 
+     	<div class="container no-bottom">
 
 
           
@@ -336,9 +341,10 @@ color:#000000;
 
   
     
+  </div>
+          <div id="mySpace">&nbsp;</div>
   
-  
-                    
+                   </div> 
 
 		<p class="center-text copyright no-bottom">COPYRIGHT 2013. ALL RIGHTS RESERVED</p> 
     </div> 
